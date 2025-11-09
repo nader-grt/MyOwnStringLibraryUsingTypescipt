@@ -5,7 +5,7 @@
   "type": "modules",
   "scripts": {
     "build": "tsc",
-    "start": "tsx src/main.ts"
+    "start": "tsx main.ts"
   },
   "keywords": [],
   "author": "",

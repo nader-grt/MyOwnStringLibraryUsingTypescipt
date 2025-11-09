@@ -1,4 +1,4 @@
-import clsString  from "./LibraryString.js"
+import clsString  from "./src/LibraryString.js"
 
 
 
