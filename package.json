@@ -1,20 +1,13 @@
 {
-  "name": "projectbuildingstringlibrary",
+  "name": "my-ts-project",
   "version": "1.0.0",
-  "description": "",
-  "type": "modules",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "tsx main.ts"
+    "start": "tsx main.ts",
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/readline-sync": "^1.4.8",
-    "readline-sync": "^1.4.10",
-    "tsx": "^4.20.0",
-    "typescript": "^5.4.0"
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }

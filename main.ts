@@ -1,19 +1,15 @@
-import clsString  from "./src/LibraryString.js"
-
-
-
-
-
+import clsLibraryString from "./src/LibraryString";
 
 function main(): void {
-    console.log("Hello, World!");
+    const obj1 = new clsLibraryString();
+    const obj2 = new clsLibraryString("Hello from clsString library");
 
-    const myString1 =  new clsString();
-    const myString2 =  new clsString("Hello from clsString!");
 
-    console.log("myString1 value:", myString1.getValue());
-    console.log("myString2 value:", myString2.getValue());
-
+    console.log("Object 1 value:", `"${obj1.getValue()}"`, "Word Count:", obj1.CountWords());
+    console.log("Object 2 value:", `"${obj2.getValue()}"`, "Word Count:", clsLibraryString.CountWords(obj2.getValue()));
+   
 }
 
 main();
+
+
