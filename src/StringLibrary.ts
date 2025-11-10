@@ -1,4 +1,4 @@
-export default class clsLibraryString {
+export default class clsStringLibrary {
     private _value: string;
 
     constructor(value?: string) {
@@ -43,6 +43,6 @@ export default class clsLibraryString {
       //  obj._value = "just to try every thing ok nader"
      
      //   return this.CountWords(this._value);
-        return clsLibraryString.CountWords(this._value); // ✅ call static method
+        return clsStringLibrary.CountWords(this._value); // ✅ call static method
     }
 }
