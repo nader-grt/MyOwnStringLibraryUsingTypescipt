@@ -20,9 +20,9 @@ function main(): void {
 
   console.log("invertAllStringCase The Result is hELLO nADER hOW aRE yOU\t", clsStringLibrary.invertAllStringCase("Hello Nader How Are You"))
 
-console.log("countLetterIsMutchCase Yes  ", clsStringLibrary.countLetterIsMutchCase("Mohammed Abu-Hadhoud Programming Advice",'m',true))
+console.log("countLetterIsMutchCase Yes  ", clsStringLibrary.countLetterIsMutchCase("The programmer is must learn the development Programming",'m',true))
 
-console.log("countLetterIsMutchCase No  ", clsStringLibrary.countLetterIsMutchCase("Mohammed Abu-Hadhoud Programming Advice",'m',false))
+console.log("countLetterIsMutchCase No  ", clsStringLibrary.countLetterIsMutchCase("Mohammed ,The programmer is must learn the development Programming ",'m',false))
 }
 
 main();
