@@ -3,29 +3,26 @@ import clsStringLibrary from "./src/StringLibrary";
 function main(): void {
   const obj1 = new clsStringLibrary();
 
-  obj1.setValue("Hello With Typescript from clsString library");
+ 
 
-  console.log(
-    "String 1 of obj1 value:",
-    `${obj1.getValue()}`,
-    "\t\tWord Count:",
-    obj1.CountWords()
-  );
-  console.log(
-    "String 2 of obj2 value:",
-    `Nader Chargui is learning TypeScript`,
-    "\tWord Count:",
-    clsStringLibrary.CountWords("Nader Chargui is learning TypeScript")
-  );
 
-  console.log(
-    "String 2 of obj2 vowels are :",
-    `Nader Chargui is learning TypeScript`,
-    "\tCount vowels:",
-    obj1.CountVowels()
-  );
+  console.log("lower First Letter of each words are :", clsStringLibrary.LowerFirsrLetterEachWord("HELLO NADER HOW ARE YOU"));
 
-  console.log("\nupper words are :", clsStringLibrary.UpperEachWord("hello nader how are you"));
+  console.log("lower all Letters are :", clsStringLibrary.lowerAllString("HELLO NADER HOW ARE YOU"));
+
+  //upperAllString
+
+  console.log("upper all Letters are :", obj1.upperAllString());
+
+  console.log("invertCharacterCase The Result of a is Upper\t", clsStringLibrary.invertCharacterCase("a"))
+
+  console.log("invertCharacterCase The Result is A Lower\t", clsStringLibrary.invertCharacterCase('A'))
+
+  console.log("invertAllStringCase The Result is hELLO nADER hOW aRE yOU\t", clsStringLibrary.invertAllStringCase("Hello Nader How Are You"))
+
+console.log("countLetterIsMutchCase Yes  ", clsStringLibrary.countLetterIsMutchCase("Mohammed Abu-Hadhoud Programming Advice",'m',true))
+
+console.log("countLetterIsMutchCase No  ", clsStringLibrary.countLetterIsMutchCase("Mohammed Abu-Hadhoud Programming Advice",'m',false))
 }
 
 main();

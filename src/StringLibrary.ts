@@ -91,7 +91,169 @@ export default class clsStringLibrary {
     return result;
   }
 
-  public UpperEachWord(): string {
-    return clsStringLibrary.UpperEachWord(this._value);
+  public UpperEachWord() {
+    this._value = clsStringLibrary.UpperEachWord(this._value);
+  }
+
+  public static PrintFirstLetterEachWord(str: string): void {
+    let isExistSpace: boolean = true;
+
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] !== " " && isExistSpace) {
+        console.log("First Letter: " + str[i].toUpperCase());
+      }
+
+      isExistSpace = str[i] === " ";
+    }
+  }
+
+  public PrintFirstLetterEachWord(): void {
+    clsStringLibrary.PrintFirstLetterEachWord(this._value);
+  }
+
+  public static LowerFirsrLetterEachWord(str: string): string {
+    let isExistSpace: boolean = true;
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] !== " " && isExistSpace) {
+        result += str[i].toLowerCase();
+      } else {
+        result += str[i];
+      }
+
+      isExistSpace = str[i] === " ";
+    }
+    return result;
+  }
+
+  public LowerFirsrLetterEachWord() {
+    this._value = clsStringLibrary.LowerFirsrLetterEachWord(this._value);
+  }
+
+  public static lowerAllString(str: string): string {
+    /**
+     let result = "";
+  for (let ch of str) {
+    result += ch === ' ' ? ch : ch.toLowerCase();
+  }
+  return result;
+     */
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] !== " ") result += str[i].toLowerCase();
+      else result += str[i];
+    }
+    return result;
+  }
+
+  public lowerAllString(): void {
+    this._value = clsStringLibrary.lowerAllString(this._value);
+  }
+
+  public static upperAllString(str: string): string {
+    let result = "";
+    for (let ch of str) {
+      result += ch === " " ? ch : ch.toUpperCase();
+    }
+    return result;
+  }
+
+  public upperAllString(): void {
+    this._value = clsStringLibrary.upperAllString(this._value);
+  }
+
+  public static invertCharacterCase(str: string = ""): string {
+    str =
+      str.length == 1 && str === str.toLowerCase()
+        ? str.toUpperCase()
+        : str.toLowerCase();
+
+    return str;
+  }
+
+  public static invertAllStringCase(str: string): string {
+    let result: string = "";
+    for (const ch of str) {
+      result += clsStringLibrary.invertCharacterCase(ch);
+    }
+
+    return result;
+  }
+
+  public invertAllStringCase(): void {
+    this._value = clsStringLibrary.invertAllStringCase(this._value);
+  }
+
+  private static isLower(text: string = ""): boolean {
+    return text.toLowerCase() === text;
+  }
+
+  private static isUpper(text: string = ""): boolean {
+    return text.toUpperCase() === text;
+  }
+
+  public static countUpperLetter(str: string): number {
+    let count: number = 0;
+    for (const ch of str) {
+      if (this.isUpper(ch) && ch !== " ") {
+        count++;
+      }
+    }
+
+    return count;
+  }
+
+  public countUpperLetter(str: string): number {
+    return clsStringLibrary.countUpperLetter(this._value);
+  }
+
+  public static countLowerLetter(str: string): number {
+    let count: number = 0;
+    for (const ch of str) {
+      if (this.isLower(ch) && ch !== " ") {
+        count++;
+      }
+    }
+
+    return count;
+  }
+  public countLowerLetter(str: string): number {
+    return clsStringLibrary.countLowerLetter(this._value);
+  }
+
+  public static countLetterIsMutchCase(
+    str: string,
+    chFrom: string = "",
+    matchCase: boolean
+  ): any {
+    let countmatchCase = 0,
+      countWithoutmatchCase = 0;
+
+    for (const ch of str) {
+      if (matchCase === true) {
+        if (ch === chFrom) countmatchCase++;
+      } else {
+        if (ch.toLowerCase() === chFrom.toLowerCase()) countWithoutmatchCase++;
+      }
+    }
+
+    return {
+      YesmatchCase: `Letter ${chFrom}                               is count ${countmatchCase} `,
+      NomatchCase: `Letter ${chFrom} or ${chFrom.toUpperCase()}    is count ${countWithoutmatchCase} `,
+    };
+  }
+
+   public static PrintAllVowels(str:string):void
+   {
+
+    for (const ch of str) {
+         if(this.IsVOWELetter(ch))
+          console.log(` Vowels are  ${ch}   `)
+    }
+
+   }
+
+  public static joinString(): string {
+    return "";
   }
 }
