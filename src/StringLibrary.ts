@@ -253,6 +253,80 @@ export default class clsStringLibrary {
 
    }
 
+   public static  PrintEachWordInString(S1: string): void {
+    let seperator: string = " "; // seperator 
+    console.log("\nYour string words are:\n");
+  
+    let pos: number = 0;
+    let sWord: string = "";
+  
+    // Loop until no more spaces are found
+    while ((pos = S1.indexOf(seperator)) !== -1) {
+      sWord = S1.substring(0, pos); // extract the word
+  
+      if (sWord !== "") {
+        console.log(sWord);
+      }
+  
+      // remove processed part (word + space)
+      S1 = S1.substring(pos + seperator.length);
+    }
+  
+    // print last word
+    if (S1 !== "") {
+      console.log(S1);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  public static SplitString(str:string ,sepeartor:string =" "):string[]
+  {
+    let pos =0 ;
+    let sword :string = ""
+    let listWord:string[] = [] ;
+
+
+           while ((pos = str.indexOf(sepeartor)) !== -1) {
+            
+            sword = str.substring(0,pos)
+            if(sword !== "")
+            {
+              listWord.push(sword)  ;
+            }
+
+            str.substring(pos + sepeartor.length)
+           }
+
+           if(str != "")
+            listWord.push(str)  ;
+    return listWord
+  }
+
+
   public static joinString(): string {
     return "";
   }
